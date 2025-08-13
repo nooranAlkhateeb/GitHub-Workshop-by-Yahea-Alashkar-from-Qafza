@@ -1,0 +1,28 @@
+# file organization python script
+import os
+import shutil
+
+def organize_files_by_type(folder_path):
+    if not os.path.exists(folder_path):
+        print(f"The folder '{folder_path}' does not exist.")
+        return
+
+    for filename in os.listdir(folder_path):
+        file_path = os.path.join(folder_path, filename)
+
+        if os.path.isfile(file_path):
+            file_extension = os.path.splitext(filename)[1].lower().strip(".")
+            if file_extension == "":
+                file_extension = "no_extension"
+
+            folder_name = file_extension.upper() + "_Files"
+            folder_destination = os.path.join(folder_path, folder_name)
+
+            os.makedirs(folder_destination, exist_ok=True)
+            shutil.move(file_path, os.path.join(folder_destination, filename))
+
+    print("✅ Files have been organized successfully!")
+
+# Example usage
+# Change the path to the folder you want to organize
+organize_files_by_type(r"C:\Users\YourName\Downloads")
