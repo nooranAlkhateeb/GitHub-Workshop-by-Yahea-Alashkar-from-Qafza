@@ -1,3 +1,21 @@
+Steps to create a repository on GitHub:
+
+1. Log in to GitHub at [https://github.com](https://github.com).
+2. Click the "+" icon in the top-right corner.
+3. Select "New repository".
+4. Enter a repository name (e.g., `file-organizer`).
+5. Optionally add a description.
+6. Choose visibility: Public or Private.
+7. (Optional) Check "Add a README file", select a .gitignore (Python if needed), and choose a license.
+8. Click the green "Create repository" button.
+9. To add files using the website:
+
+   * Go to the repository page.
+   * Click "Add file" → "Upload files".
+   * Drag and drop files, then commit changes.
+10. Your repository is now ready and accessible on GitHub.
+
+-------------------------------------------------------------------------------------------------------
 This script’s idea is simple: it automatically organizes your files into folders based on their file type (extension).
 
 Concept:
